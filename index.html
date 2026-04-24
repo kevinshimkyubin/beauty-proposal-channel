@@ -1,0 +1,2287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>뷰티 브랜드 VIP·ASP 성장 제안서 — 채널톡</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: #f5f5f5;
+    color: #1a1a1a;
+  }
+
+  .slide {
+    width: 1080px;
+    min-height: 607px;
+    background: #fff;
+    margin: 0 auto 32px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── SLIDE 1: Cover ── */
+  .cover {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 56px 72px;
+  }
+
+  .cover-eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #e8a0bf;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .cover-title {
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .cover-title span {
+    color: #e8a0bf;
+  }
+
+  .cover-sub {
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.6;
+    margin-bottom: 48px;
+    max-width: 560px;
+  }
+
+  .cover-tag {
+    display: inline-block;
+    background: rgba(232,160,191,0.2);
+    border: 1px solid rgba(232,160,191,0.4);
+    color: #e8a0bf;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-right: 8px;
+  }
+
+  .cover-logo {
+    position: absolute;
+    bottom: 40px;
+    right: 72px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cover-logo-img {
+    height: 32px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.95;
+  }
+
+  .cover-deco {
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(232,160,191,0.15) 0%, transparent 70%);
+  }
+
+  /* ── Brand Marquee ── */
+  .brand-marquee {
+    position: absolute;
+    bottom: 110px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  }
+
+  .marquee-row {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .marquee-track {
+    display: flex;
+    gap: 14px;
+    flex-shrink: 0;
+    min-width: max-content;
+    padding-right: 14px;
+  }
+
+  .marquee-scroll-left .marquee-track {
+    animation: scroll-left 35s linear infinite;
+  }
+
+  .marquee-scroll-right .marquee-track {
+    animation: scroll-right 45s linear infinite;
+  }
+
+  @keyframes scroll-left {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @keyframes scroll-right {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+  }
+
+  .brand-chip {
+    height: 54px;
+    padding: 0 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .brand-chip img {
+    max-height: 38px;
+    max-width: 220px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.82;
+  }
+
+  .cover-deco2 {
+    position: absolute;
+    bottom: -80px;
+    right: 200px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(100,160,255,0.1) 0%, transparent 70%);
+  }
+
+  /* ── Slide Header ── */
+  .slide-header {
+    padding: 36px 72px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .slide-num {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #c0a0b0;
+    text-transform: uppercase;
+  }
+
+  .slide-logo-sm {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .slide-logo-img {
+    height: 20px;
+    width: auto;
+    opacity: 0.7;
+  }
+
+  /* ── SLIDE 2: Problem ── */
+  .problem-slide {
+    padding: 0 72px 48px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #e8a0bf;
+    margin: 28px 0 12px;
+  }
+
+  .section-title {
+    font-size: 30px;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.25;
+    margin-bottom: 32px;
+  }
+
+  .section-title em {
+    color: #c45c8a;
+    font-style: normal;
+  }
+
+  .three-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    flex: 1;
+  }
+
+  .flow-row {
+    display: flex;
+    gap: 14px;
+    align-items: stretch;
+    flex: 1;
+  }
+
+  .flow-row > .prob-card { flex: 1; }
+
+  .flow-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 44px;
+    font-weight: 900;
+    color: #c45c8a;
+    flex-shrink: 0;
+    padding: 0 2px;
+    line-height: 1;
+  }
+
+  .prob-card.problem {
+    background: linear-gradient(135deg, #fdf0f5 0%, #fff5f9 100%);
+    border: 2px solid #c45c8a;
+    box-shadow: 0 10px 28px rgba(196,92,138,0.18);
+    flex: 1.1;
+  }
+
+  .prob-card.problem .prob-card-title {
+    color: #c45c8a;
+  }
+
+  .prob-card {
+    background: #fdf6f9;
+    border: 1.5px solid #f0dce8;
+    border-radius: 20px;
+    padding: 48px 32px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 320px;
+  }
+
+  .prob-card-icon {
+    font-size: 72px;
+    margin-bottom: 28px;
+    line-height: 1;
+  }
+
+  .prob-card-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+  }
+
+  .prob-card-note {
+    margin-top: 14px;
+    padding: 8px 14px;
+    background: rgba(0,0,0,0.04);
+    border-radius: 8px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #666;
+    line-height: 1.45;
+    letter-spacing: -0.01em;
+  }
+
+  .prob-card.problem .prob-card-note {
+    background: rgba(196,92,138,0.1);
+    color: #b34a7a;
+  }
+
+  .prob-card-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #c45c8a;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 14px;
+    letter-spacing: 1px;
+  }
+
+  /* ── SLIDE 3: Why 자사몰 ── */
+  .why-slide {
+    padding: 0 72px 48px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    flex: 1;
+  }
+
+  .channel-box {
+    border-radius: 16px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .channel-box.bad {
+    background: #f8f8f8;
+    border: 1.5px solid #e8e8e8;
+  }
+
+  .channel-box.good {
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+    border: 1.5px solid #0f3460;
+  }
+
+  .channel-box-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .channel-box.bad .channel-box-label { color: #999; }
+  .channel-box.good .channel-box-label { color: #e8a0bf; }
+
+  .channel-box-title {
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  .channel-box.bad .channel-box-title { color: #444; }
+  .channel-box.good .channel-box-title { color: #fff; }
+
+  .channel-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .channel-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-top: 7px;
+    flex-shrink: 0;
+  }
+
+  .channel-box.bad .channel-dot { background: #ccc; }
+  .channel-box.good .channel-dot { background: #e8a0bf; }
+
+  .channel-item-text {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .channel-box.bad .channel-item-text { color: #777; }
+  .channel-box.good .channel-item-text { color: rgba(255,255,255,0.8); }
+
+  .arrow-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    background: #e8a0bf;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    z-index: 10;
+    box-shadow: 0 4px 16px rgba(232,160,191,0.4);
+  }
+
+  .two-col-wrap {
+    position: relative;
+    flex: 1;
+    display: flex;
+    gap: 24px;
+  }
+
+  /* ── SLIDE 4: Solution ── */
+  .solution-slide {
+    padding: 0 72px 48px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .solution-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    flex: 1;
+  }
+
+  .sol-card {
+    border-radius: 16px;
+    padding: 28px 22px;
+    border: 1.5px solid #eee;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sol-card.primary {
+    background: linear-gradient(135deg, #c45c8a 0%, #e8749a 100%);
+    border-color: transparent;
+  }
+
+  .sol-card-icon {
+    font-size: 26px;
+    margin-bottom: 14px;
+  }
+
+  .sol-card-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  .sol-card.primary .sol-card-title { color: #fff; }
+  .sol-card:not(.primary) .sol-card-title { color: #1a1a1a; }
+
+  .sol-card-body {
+    font-size: 12.5px;
+    line-height: 1.7;
+    flex: 1;
+  }
+
+  .sol-card.primary .sol-card-body { color: rgba(255,255,255,0.85); }
+  .sol-card:not(.primary) .sol-card-body { color: #777; }
+
+  .sol-tag {
+    margin-top: 16px;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 8px;
+  }
+
+  .sol-card.primary .sol-tag {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+  }
+
+  .sol-card:not(.primary) .sol-tag {
+    background: #fdf0f5;
+    color: #c45c8a;
+  }
+
+  /* ── SLIDE: CoS/Notebook Demo ── */
+  .demo-slide {
+    padding: 0 72px 56px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .demo-stage {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 24px 0 14px;
+  }
+
+  .demo-question {
+    font-size: 30px;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .demo-question em {
+    color: #c45c8a;
+    font-style: normal;
+  }
+
+  .demo-sub {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    max-width: 820px;
+  }
+
+  .demo-frame {
+    width: 100%;
+    border-radius: 18px;
+    border: 1.5px solid #f0dce8;
+    background: #fdf6f9;
+    padding: 24px;
+    box-shadow: 0 6px 24px rgba(196,92,138,0.08);
+  }
+
+  .demo-frame-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding: 0 4px;
+  }
+
+  .demo-frame-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #c45c8a;
+  }
+
+  .demo-frame-caption {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #555;
+  }
+
+  .demo-full-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #eee;
+  }
+
+  .demo-full-img.notebook { max-width: 820px; }
+
+  .cos-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .cos-img-wrap {
+    position: relative;
+    align-self: start;
+    transition: all 0.3s ease;
+  }
+
+  .cos-img-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #eee;
+  }
+
+  .cos-split > .cos-img-wrap:not(.focus) {
+    opacity: 0.78;
+    filter: saturate(0.92);
+  }
+
+  .cos-img-wrap.focus {
+    transform: scale(1.03);
+  }
+
+  .cos-img-wrap.focus img {
+    border: 3px solid #c45c8a;
+    box-shadow:
+      0 0 0 6px rgba(232,160,191,0.28),
+      0 0 0 10px rgba(232,160,191,0.14),
+      0 16px 48px rgba(196,92,138,0.35);
+  }
+
+  .cos-img-label {
+    position: absolute;
+    top: 12px;
+    padding: 5px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  .cos-img-label.left {
+    left: 12px;
+    background: rgba(255,255,255,0.92);
+    color: #555;
+    border: 1px solid #e0e0e0;
+  }
+
+  .cos-img-label.right {
+    left: 12px;
+    background: rgba(26,26,46,0.92);
+    color: #fff;
+  }
+
+  .cos-focus-badge {
+    position: absolute;
+    top: -14px;
+    right: -10px;
+    background: linear-gradient(135deg, #c45c8a 0%, #e8749a 100%);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 8px 16px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 6px 20px rgba(196,92,138,0.45);
+    transform: rotate(3deg);
+    z-index: 2;
+  }
+
+  /* ── KPI Strip ── */
+  .kpi-strip {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(15,52,96,0.2);
+  }
+
+  .kpi-item {
+    flex: 1;
+    text-align: center;
+    color: #fff;
+  }
+
+  .kpi-val {
+    font-size: 26px;
+    font-weight: 900;
+    color: #e8a0bf;
+    line-height: 1;
+    margin-bottom: 6px;
+    letter-spacing: -0.02em;
+  }
+
+  .kpi-unit {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(232,160,191,0.8);
+    margin-left: 2px;
+  }
+
+  .kpi-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 0.3px;
+  }
+
+  .kpi-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255,255,255,0.12);
+  }
+
+  /* ── SLIDE 5: Cases ── */
+  .cases-slide {
+    padding: 0 72px 48px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .case-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+
+  .case-row + .case-row {
+    margin-top: 20px;
+  }
+
+  .case-card {
+    border-radius: 20px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .case-card.amuse {
+    background: #fff5f9;
+    border: 2px solid #f0c8d8;
+  }
+
+  .case-card.skinfood {
+    background: #f5fff7;
+    border: 2px solid #b8e8c0;
+  }
+
+  .case-card.troiareuke {
+    background: #f0f5ff;
+    border: 2px solid #c8d6f0;
+  }
+
+  .case-card.whipd {
+    background: #fff8f0;
+    border: 2px solid #f0d8b8;
+  }
+
+  .case-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .case-brand-logo {
+    height: 44px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+    border-radius: 10px;
+    padding: 6px 10px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+
+  .case-brand-name {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1a1a1a;
+  }
+
+  .case-brand-tag {
+    font-size: 11px;
+    font-weight: 600;
+    color: #999;
+    margin-top: 2px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .case-challenge {
+    font-size: 12.5px;
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px dashed #e0e0e0;
+  }
+
+  .case-challenge strong {
+    color: #555;
+    font-weight: 600;
+  }
+
+  .metric-row {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+  }
+
+  .metric {
+    flex: 1;
+    text-align: center;
+    background: rgba(255,255,255,0.7);
+    border-radius: 12px;
+    padding: 14px 8px;
+  }
+
+  .metric-val {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+
+  .amuse .metric-val { color: #c45c8a; }
+  .skinfood .metric-val { color: #2e8b3a; }
+  .troiareuke .metric-val { color: #2b4a8c; }
+  .whipd .metric-val { color: #9c6a2e; }
+
+  .case-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 16px;
+    padding: 8px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.8);
+    border: 1.5px solid;
+    align-self: flex-start;
+    transition: all 0.2s ease;
+    letter-spacing: 0.2px;
+  }
+
+  .case-link:hover {
+    background: #fff;
+    transform: translateX(2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  .amuse .case-link { color: #c45c8a; border-color: #f0c8d8; }
+  .skinfood .case-link { color: #2e8b3a; border-color: #b8e8c0; }
+  .troiareuke .case-link { color: #2b4a8c; border-color: #c8d6f0; }
+  .whipd .case-link { color: #9c6a2e; border-color: #f0d8b8; }
+
+  .global-ref-footer {
+    margin-top: 18px;
+    padding: 14px 22px;
+    background: #f7f7f9;
+    border: 1px dashed #d8d8de;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .global-ref-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #555;
+  }
+
+  .global-ref-label::before {
+    content: "🌏";
+    font-size: 16px;
+  }
+
+  .global-ref-chips {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .global-ref-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 20px;
+    height: 48px;
+    background: #fff;
+    border: 1.5px solid #e8d8e2;
+    border-radius: 24px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #c45c8a;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .global-ref-chip:hover {
+    background: #fdf0f5;
+    border-color: #c45c8a;
+    transform: translateX(2px);
+    box-shadow: 0 4px 12px rgba(196,92,138,0.18);
+  }
+
+  .global-ref-chip img {
+    height: 20px;
+    width: auto;
+    max-width: 180px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .global-ref-chip .ref-arrow {
+    font-size: 11px;
+    color: #c45c8a;
+    opacity: 0.6;
+    margin-left: 2px;
+  }
+
+  /* ── Global Reference Slide ── */
+  .global-slide {
+    padding: 0 72px 48px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .global-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    flex: 1;
+  }
+
+  .global-card {
+    background: linear-gradient(135deg, #f7f7f9 0%, #fdf6f9 100%);
+    border: 1.5px solid #e8d8e2;
+    border-radius: 18px;
+    padding: 28px 26px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .global-card-icon {
+    font-size: 30px;
+    margin-bottom: 12px;
+    line-height: 1;
+  }
+
+  .global-card-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: linear-gradient(135deg, #c45c8a 0%, #e8749a 100%);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 12px rgba(196,92,138,0.3);
+  }
+
+  .global-card-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.35;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e8a0bf;
+  }
+
+  .global-card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .global-card-list li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.65;
+    margin-bottom: 12px;
+  }
+
+  .global-card-list li::before {
+    content: "•";
+    position: absolute;
+    left: 2px;
+    top: -2px;
+    color: #c45c8a;
+    font-weight: 900;
+    font-size: 16px;
+  }
+
+  .global-card-list li strong {
+    color: #c45c8a;
+    font-weight: 700;
+  }
+
+  .metric-label {
+    font-size: 10.5px;
+    color: #999;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  /* ── SLIDE 6: CTA ── */
+  .cta-slide {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    justify-content: center;
+    align-items: center;
+    padding: 64px 72px;
+    text-align: center;
+  }
+
+  .cta-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #e8a0bf;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .cta-title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.25;
+    margin-bottom: 16px;
+  }
+
+  .cta-title span { color: #e8a0bf; }
+
+  .cta-sub {
+    font-size: 17px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.88);
+    line-height: 1.85;
+    max-width: 680px;
+    margin: 0 auto 40px;
+  }
+
+  .cta-sub em {
+    font-style: normal;
+    color: #f5b3cd;
+    font-weight: 800;
+  }
+
+  .cta-sub strong {
+    color: #fff;
+    font-weight: 800;
+  }
+
+  .cta-limited {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 auto 20px;
+    padding: 9px 22px;
+    background: linear-gradient(135deg, #c45c8a 0%, #e8749a 100%);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    border-radius: 30px;
+    box-shadow: 0 8px 24px rgba(196,92,138,0.5);
+    animation: limited-pulse 2s ease-in-out infinite;
+  }
+
+  .cta-limited::before {
+    content: "🎁";
+    font-size: 15px;
+  }
+
+  @keyframes limited-pulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(196,92,138,0.5); }
+    50%      { transform: scale(1.03); box-shadow: 0 12px 32px rgba(196,92,138,0.7); }
+  }
+
+  .cta-boxes {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .cta-box {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 16px;
+    padding: 20px 24px;
+    text-align: left;
+    width: 220px;
+  }
+
+  .cta-box-icon { font-size: 22px; margin-bottom: 8px; }
+  .cta-box-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .cta-box-desc {
+    font-size: 11.5px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.5;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #e8a0bf, #c45c8a);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 14px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    box-shadow: 0 8px 24px rgba(196,92,138,0.4);
+  }
+
+  .cta-footer {
+    margin-top: 28px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* ── Inline highlight (형광펜) ── */
+  .hl-pink {
+    background: linear-gradient(180deg, transparent 55%, #ffd6e5 55%, #ffc0d6 100%);
+    color: #1a1a1a;
+    font-weight: 700;
+    padding: 0 3px;
+    border-radius: 2px;
+  }
+
+  /* ── Divider ── */
+  .divider {
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #e8a0bf, #c45c8a);
+    border-radius: 2px;
+    margin-bottom: 20px;
+  }
+
+  /* ── SLIDE 3: Declaration ── */
+  .declare-slide {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 64px 72px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .declare-deco {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .declare-deco-1 {
+    top: -120px;
+    left: -120px;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(232,160,191,0.18) 0%, transparent 70%);
+  }
+
+  .declare-deco-2 {
+    bottom: -140px;
+    right: -140px;
+    width: 460px;
+    height: 460px;
+    background: radial-gradient(circle, rgba(100,160,255,0.12) 0%, transparent 70%);
+  }
+
+  .declare-eyebrow {
+    position: relative;
+    z-index: 1;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #e8a0bf;
+    margin-bottom: 24px;
+  }
+
+  .declare-divider {
+    position: relative;
+    z-index: 1;
+    width: 56px;
+    height: 3px;
+    background: linear-gradient(90deg, #e8a0bf, #c45c8a);
+    border-radius: 2px;
+    margin: 0 auto 32px;
+  }
+
+  .declare-title {
+    position: relative;
+    z-index: 1;
+    font-size: 88px;
+    font-weight: 900;
+    color: rgba(255,255,255,0.95);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 36px;
+  }
+
+  .declare-title span {
+    background: linear-gradient(135deg, #e8a0bf, #c45c8a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .declare-sub {
+    position: relative;
+    z-index: 1;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.8;
+    max-width: 640px;
+    margin-bottom: 48px;
+  }
+
+  .declare-arrow {
+    position: relative;
+    z-index: 1;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* ── SLIDE: Before (채널톡 기본기) ── */
+  .before-slide {
+    padding: 0 56px 48px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .before-topheader {
+    font-size: 15px;
+    font-weight: 700;
+    color: #c45c8a;
+    margin: 24px 0 18px;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .before-topheader .before-topic {
+    border-bottom: 2px dotted #c45c8a;
+    padding-bottom: 1px;
+  }
+
+  /* ── Before / After Badges ── */
+  .stage-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 5px 12px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .stage-badge.before {
+    background: #e8e8ec;
+    color: #777;
+    border: 1px solid #d8d8dc;
+  }
+
+  .stage-badge.after {
+    background: linear-gradient(135deg, #c45c8a 0%, #e8749a 100%);
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(196,92,138,0.35);
+  }
+
+  .stage-sub {
+    font-size: 13px;
+    font-weight: 600;
+    color: #888;
+    letter-spacing: -0.01em;
+  }
+
+  .before-bridge {
+    margin-top: 22px;
+    padding: 20px 28px;
+    background: linear-gradient(90deg, #fdf0f5 0%, #fff5f9 100%);
+    border-left: 5px solid #c45c8a;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .before-bridge::after {
+    content: "↓";
+    position: absolute;
+    right: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 42px;
+    font-weight: 900;
+    color: #c45c8a;
+    opacity: 0.35;
+    animation: bridge-bounce 2s ease-in-out infinite;
+  }
+
+  @keyframes bridge-bounce {
+    0%, 100% { transform: translateY(-50%); }
+    50% { transform: translateY(-30%); }
+  }
+
+  .before-bridge-line1 {
+    font-size: 13px;
+    font-weight: 500;
+    color: #999;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+    text-decoration: line-through;
+    text-decoration-color: #ccc;
+    text-decoration-thickness: 1.5px;
+  }
+
+  .before-bridge-line2 {
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
+  }
+
+  .before-bridge-line2 em {
+    font-style: normal;
+    background: linear-gradient(135deg, #c45c8a 0%, #e8749a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .before-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    flex: 1;
+  }
+
+  .before-col {
+    background: #f7f7f9;
+    border-radius: 20px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .before-q {
+    font-size: 17px;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+  }
+
+  .before-q em {
+    font-style: normal;
+    border-bottom: 2px dotted #c45c8a;
+    padding-bottom: 1px;
+  }
+
+  .before-feature-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1a1a1a;
+    border-left: 3px solid #1a1a1a;
+    padding-left: 10px;
+    margin-bottom: 14px;
+  }
+
+  .before-feature-body {
+    font-size: 12.5px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 22px;
+  }
+
+  .before-feature-body u {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: #c45c8a;
+    text-underline-offset: 3px;
+  }
+
+  .before-visual {
+    margin-top: auto;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  /* ── Welcome popup mockup ── */
+  .welcome-popup {
+    width: 172px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .welcome-popup-img {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    position: relative;
+  }
+
+  .welcome-popup-img.amuse {
+    background: linear-gradient(135deg, #ffc7dc 0%, #ff9cbf 100%);
+  }
+
+  .welcome-popup-img.skinfood {
+    background: linear-gradient(135deg, #ffe8d1 0%, #ffc299 100%);
+  }
+
+  .welcome-popup-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.85);
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-weight: 700;
+  }
+
+  .welcome-popup-body {
+    padding: 10px 12px 12px;
+  }
+
+  .welcome-popup-brand {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    color: #999;
+    margin-bottom: 6px;
+  }
+
+  .welcome-popup-brand b {
+    font-size: 10.5px;
+    color: #333;
+    font-weight: 700;
+  }
+
+  .welcome-popup-title {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+
+  .welcome-popup-desc {
+    font-size: 9.5px;
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .welcome-popup-btn {
+    width: 100%;
+    padding: 7px;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .welcome-popup-btn.pink { background: #fdf0f5; color: #c45c8a; }
+  .welcome-popup-btn.mint { background: #e8f5ec; color: #2e8b3a; }
+
+  /* ── Chat + Customer Info mockup ── */
+  .chat-mock {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .chat-window {
+    width: 200px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    padding: 12px;
+    font-size: 10px;
+  }
+
+  .chat-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 10px;
+  }
+
+  .chat-avatar {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e8a0bf, #c45c8a);
+  }
+
+  .chat-header-name {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  .chat-bubble {
+    padding: 7px 10px;
+    border-radius: 10px;
+    font-size: 9.5px;
+    line-height: 1.45;
+    margin-bottom: 6px;
+    max-width: 80%;
+  }
+
+  .chat-bubble.user {
+    background: #c45c8a;
+    color: #fff;
+    margin-left: auto;
+    border-bottom-right-radius: 2px;
+  }
+
+  .chat-bubble.brand {
+    background: #f5f5f7;
+    color: #333;
+    border-bottom-left-radius: 2px;
+  }
+
+  .chat-bubble-from {
+    font-size: 9px;
+    color: #999;
+    font-weight: 600;
+    margin-bottom: 3px;
+  }
+
+  .chat-action {
+    padding: 6px 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 9px;
+    color: #555;
+    font-weight: 600;
+    margin-top: 6px;
+  }
+
+  .chat-arrow {
+    font-size: 12px;
+    color: #c45c8a;
+    align-self: center;
+    margin-bottom: 80px;
+  }
+
+  .customer-card {
+    width: 170px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    padding: 12px;
+    font-size: 9.5px;
+  }
+
+  .customer-card-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    color: #333;
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+
+  .customer-card-user {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 9px;
+  }
+
+  .customer-avatar {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffc7dc, #e8a0bf);
+  }
+
+  .customer-name {
+    font-size: 11px;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+
+  .customer-badge {
+    display: inline-block;
+    background: #fdf0f5;
+    color: #c45c8a;
+    font-size: 8px;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 4px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+
+  .customer-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    color: #666;
+    margin-bottom: 4px;
+  }
+
+  .customer-row b { color: #333; font-weight: 600; }
+
+  .customer-tags {
+    display: flex;
+    gap: 4px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  .customer-tag {
+    background: #fdf0f5;
+    color: #c45c8a;
+    font-size: 8.5px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  .customer-tag.gold {
+    background: #fff5e0;
+    color: #9c7a2e;
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════ -->
+<!-- SLIDE 1: COVER                    -->
+<!-- ══════════════════════════════════ -->
+<div class="slide cover">
+  <div class="cover-deco"></div>
+  <div class="cover-deco2"></div>
+
+  <div class="cover-eyebrow">채널톡 · Beauty Brand VIP Proposal 2026</div>
+  <div class="cover-title">
+    숨은 충성고객 발굴로,<br>
+    <span>자사몰 매출·브랜드를 성장시킵니다</span>
+  </div>
+  <div style="margin-top: 24px;">
+    <span class="cover-tag">VIP 발굴</span>
+    <span class="cover-tag">ASP 상승</span>
+    <span class="cover-tag">1:1 컨시어지</span>
+  </div>
+
+  <div class="brand-marquee">
+    <div class="marquee-row marquee-scroll-left">
+      <div class="marquee-track">
+        <div class="brand-chip"><img src="brand_logos/amuse.png" alt="어뮤즈"></div>
+        <div class="brand-chip"><img src="brand_logos/skinfood.png" alt="스킨푸드"></div>
+        <div class="brand-chip"><img src="brand_logos/isntree.png" alt="이즈앤트리"></div>
+        <div class="brand-chip"><img src="brand_logos/abib.png" alt="아비브"></div>
+        <div class="brand-chip"><img src="brand_logos/anua.png" alt="아누아"></div>
+        <div class="brand-chip"><img src="brand_logos/tirtir.png" alt="티르티르"></div>
+        <div class="brand-chip"><img src="brand_logos/vt.png" alt="브이티"></div>
+        <div class="brand-chip"><img src="brand_logos/missha.png" alt="미샤"></div>
+        <div class="brand-chip"><img src="brand_logos/dalba.png" alt="달바"></div>
+        <!-- duplicate for seamless loop -->
+        <div class="brand-chip"><img src="brand_logos/amuse.png" alt="어뮤즈"></div>
+        <div class="brand-chip"><img src="brand_logos/skinfood.png" alt="스킨푸드"></div>
+        <div class="brand-chip"><img src="brand_logos/isntree.png" alt="이즈앤트리"></div>
+        <div class="brand-chip"><img src="brand_logos/abib.png" alt="아비브"></div>
+        <div class="brand-chip"><img src="brand_logos/anua.png" alt="아누아"></div>
+        <div class="brand-chip"><img src="brand_logos/tirtir.png" alt="티르티르"></div>
+        <div class="brand-chip"><img src="brand_logos/vt.png" alt="브이티"></div>
+        <div class="brand-chip"><img src="brand_logos/missha.png" alt="미샤"></div>
+        <div class="brand-chip"><img src="brand_logos/dalba.png" alt="달바"></div>
+      </div>
+    </div>
+    <div class="marquee-row marquee-scroll-right">
+      <div class="marquee-track">
+        <div class="brand-chip"><img src="brand_logos/meditherapy.png" alt="메디테라피"></div>
+        <div class="brand-chip"><img src="brand_logos/mediheal.png" alt="메디필"></div>
+        <div class="brand-chip"><img src="brand_logos/beplain.png" alt="비플레인"></div>
+        <div class="brand-chip"><img src="brand_logos/bioderma.png" alt="바이오더마"></div>
+        <div class="brand-chip"><img src="brand_logos/drforhair.png" alt="닥터포헤어"></div>
+        <div class="brand-chip"><img src="brand_logos/celladix.png" alt="셀라딕스"></div>
+        <div class="brand-chip"><img src="brand_logos/miksoon.png" alt="믹순"></div>
+        <div class="brand-chip"><img src="brand_logos/whipd.png" alt="휩드"></div>
+        <!-- duplicate for seamless loop -->
+        <div class="brand-chip"><img src="brand_logos/meditherapy.png" alt="메디테라피"></div>
+        <div class="brand-chip"><img src="brand_logos/mediheal.png" alt="메디필"></div>
+        <div class="brand-chip"><img src="brand_logos/beplain.png" alt="비플레인"></div>
+        <div class="brand-chip"><img src="brand_logos/bioderma.png" alt="바이오더마"></div>
+        <div class="brand-chip"><img src="brand_logos/drforhair.png" alt="닥터포헤어"></div>
+        <div class="brand-chip"><img src="brand_logos/celladix.png" alt="셀라딕스"></div>
+        <div class="brand-chip"><img src="brand_logos/miksoon.png" alt="믹순"></div>
+        <div class="brand-chip"><img src="brand_logos/whipd.png" alt="휩드"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover-logo">
+    <img class="cover-logo-img" src="channeltalk_logo.png" alt="채널톡">
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════ -->
+<!-- SLIDE 2: 뷰티 업계 현황            -->
+<!-- ══════════════════════════════════ -->
+<div class="slide">
+  <div class="slide-header">
+    <div class="slide-num">01 · 현황</div>
+    <div class="slide-logo-sm">
+      <img class="slide-logo-img" src="channeltalk_logo.png" alt="채널톡">
+    </div>
+  </div>
+  <div class="problem-slide">
+    <div class="section-label">The Reality</div>
+    <div class="section-title">
+      자사몰 안에서<br>
+      <em>충성고객을 놓치고 있습니다</em>
+    </div>
+    <div class="flow-row">
+      <div class="prob-card">
+        <div class="prob-card-title">퍼포먼스 마케팅<br>의존도 높음</div>
+        <div class="prob-card-note">광고비 절감 시<br>매출 즉시 감소</div>
+        <div class="prob-card-badge" style="background:#888">현실</div>
+      </div>
+      <div class="prob-card">
+        <div class="prob-card-title">브랜드 자산<br>축적 저조</div>
+        <div class="prob-card-note">재방문·오가닉<br>유입 기반 부족</div>
+        <div class="prob-card-badge" style="background:#888">현실</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="prob-card problem">
+        <div class="prob-card-title">자사몰 유입률 저조<br>재구매율 정체</div>
+        <div class="prob-card-note">자사몰 매출 성장 한계</div>
+        <div class="prob-card-badge">문제점</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════ -->
+<!-- SLIDE 3: 선언 페이지 — 채널톡이 돕겠습니다 -->
+<!-- ══════════════════════════════════ -->
+<div class="slide declare-slide">
+  <div class="declare-deco declare-deco-1"></div>
+  <div class="declare-deco declare-deco-2"></div>
+  <div class="declare-eyebrow">Our Promise</div>
+  <div class="declare-divider"></div>
+  <div class="declare-title">
+    놓친 충성고객 되찾는 일,<br>
+    <span>채널톡이 자신 있습니다</span>
+  </div>
+  <div class="declare-sub">
+    숨어 있던 VIP를 찾아내고,<br>
+    자사몰 매출을 키우는 일,<br>
+    저희가 가장 잘하는 영역입니다.
+  </div>
+  <div class="declare-arrow">다음 페이지에서 어떻게 해내는지 보여드릴게요 ↓</div>
+</div>
+
+
+<!-- ══════════════════════════════════ -->
+<!-- SLIDE 4: Before — 채널톡 기본기     -->
+<!-- ══════════════════════════════════ -->
+<div class="slide">
+  <div class="slide-header">
+    <div class="slide-num">03 · BEFORE</div>
+    <div class="slide-logo-sm">
+      <img class="slide-logo-img" src="channeltalk_logo.png" alt="채널톡">
+    </div>
+  </div>
+  <div class="before-slide">
+    <div class="before-topheader">
+      <span class="stage-badge before">Before</span>
+      <span class="stage-sub">지금도 제공 중 · 업계 누구나 하는 기본기</span>
+      <span class="before-topic" style="margin-left:auto">고객을 먼저 알아보고 맞이하기</span>
+    </div>
+    <div class="before-grid">
+
+      <!-- Left: 웰컴/브랜딩 메시지 -->
+      <div class="before-col">
+        <h3 class="before-q">점원이 매장에 들어온 <em>고객에게 반갑게 인사</em>하는 것처럼 온라인에서도 <em>먼저 인사를 건네야</em> 합니다</h3>
+        <div class="before-feature-title">웰컴/브랜딩 메시지</div>
+        <div class="before-feature-body">
+          <u>고객이 접하는 브랜드의 첫 인상</u>은 무엇보다 중요합니다.<br>
+          마케팅 기능을 활용해 고객에게 브랜드 스토리를 소개하거나,<br>
+          특별한 콘텐츠로 브랜드를 직접 만난 듯한 경험을 제공할 수 있습니다.
+        </div>
+        <div class="before-visual">
+          <div class="welcome-popup">
+            <div class="welcome-popup-img amuse">
+              <div class="welcome-popup-close">✕</div>
+              💄
+            </div>
+            <div class="welcome-popup-body">
+              <div class="welcome-popup-brand"><b>AMUSE</b> · 2:00 PM</div>
+              <div class="welcome-popup-title">👋 안녕하세요, 어뮤즈 브랜드 디렉터 이수민입니다.</div>
+              <div class="welcome-popup-desc">색조를 사랑하는 분들을 위해 직접 큐레이션한 시그니처 팔레트를 소개드려요...</div>
+              <div class="welcome-popup-btn pink">시그니처 팔레트 보기</div>
+            </div>
+          </div>
+          <div class="welcome-popup">
+            <div class="welcome-popup-img skinfood">
+              <div class="welcome-popup-close">✕</div>
+              🌿
+            </div>
+            <div class="welcome-popup-body">
+              <div class="welcome-popup-brand"><b>SKINFOOD</b> · 2:15 PM</div>
+              <div class="welcome-popup-title">신상 비타민 세럼, VIP에게 먼저 공개해요.</div>
+              <div class="welcome-popup-desc">지수님만을 위해 일반 출시 전 사전 리뷰 콘텐츠를 준비했습니다...</div>
+              <div class="welcome-popup-btn mint">VIP 전용 콘텐츠 보기</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: 고객이 보이는 상담 -->
+      <div class="before-col">
+        <h3 class="before-q">고객이 어떤 <em>제품에 관심이 있는지</em>, 처음 방문했는지 혹은 <em>여러 번 왔는지 알아봐야</em> 합니다</h3>
+        <div class="before-feature-title">고객이 보이는 상담</div>
+        <div class="before-feature-body">
+          상담창 오른쪽에서 <u>고객 정보와 상담 정보</u>를 볼 수 있어 정확한 상담이 가능합니다.<br>
+          고객이 누구인지 파악한 상태로 상담을 제공해 <u>고객의 만족도가 올라가고</u>,<br>
+          고객을 알아봄으로써 브랜드와 고객 간의 관계가 강화됩니다.
+        </div>
+        <div class="before-visual chat-mock">
+          <div class="chat-window">
+            <div class="chat-header">
+              <div class="chat-avatar"></div>
+              <div>
+                <div class="chat-header-name">박지수</div>
+                <div style="font-size:8.5px;color:#999">몇 분 내 답변 받으실 수 있어요</div>
+              </div>
+            </div>
+            <div class="chat-bubble user">안녕하세요</div>
+            <div class="chat-bubble user">토너랑 잘 맞는 세럼 있을까요?</div>
+            <div class="chat-bubble-from">어뮤즈 MD</div>
+            <div class="chat-bubble brand">지수님 안녕하세요! 오늘도 좋은 하루 보내고 계세요?😊</div>
+            <div class="chat-bubble brand">토너뿐만 아니라 지난번에 구매하신 크림과 잘 어울리는 세럼이 있어요!</div>
+            <div class="chat-action">제품 보러가기</div>
+          </div>
+          <div class="chat-arrow">▸</div>
+          <div class="customer-card">
+            <div class="customer-card-header">🧑 고객 정보</div>
+            <div class="customer-card-user">
+              <div class="customer-avatar"></div>
+              <div>
+                <span class="customer-name">박지수</span>
+                <span class="customer-badge">VIP</span>
+              </div>
+            </div>
+            <div class="customer-row"><span>휴대폰</span><b>+82 10-6666-55</b></div>
+            <div class="customer-row"><span>이메일</span><b>jisoo@beauty.io</b></div>
+            <div class="customer-row"><span>생년월일</span><b>1994-08-15</b></div>
+            <div class="customer-row"><span>최근 접속</span><b>2일 전</b></div>
+            <div class="customer-tags">
+              <span class="customer-tag">VIP</span>
+              <span class="customer-tag gold">멤버십·골드</span>
+            </div>
+            <div style="margin-top:10px;padding-top:9px;border-top:1px solid #f0f0f0;font-size:9px;color:#666">
+              <div style="font-weight:700;color:#333;margin-bottom:4px">📦 주문 내역</div>
+              <div style="display:flex;gap:6px;align-items:flex-start">
+                <div style="width:22px;height:22px;border-radius:5px;background:linear-gradient(135deg,#fce8f0,#f0c8d8);flex-shrink:0"></div>
+                <div>
+                  <div style="color:#333;font-weight:600;font-size:9px">시그니처 라이트 크림</div>
+                  <div style="color:#999;font-size:8.5px">ORD · ₩153,000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="before-bridge">
+      <div class="before-bridge-line1">여기까지는 업계 누구나 합니다</div>
+      <div class="before-bridge-line2">진짜 차별점은, <em>채널톡만 되는 영역</em>입니다</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════ -->
+<!-- SLIDE 4.5a: 데모 — CoS            -->
+<!-- ══════════════════════════════════ -->
+<div class="slide">
+  <div class="slide-header">
+    <div class="slide-num">04 · AFTER · CoS</div>
+    <div class="slide-logo-sm">
+      <img class="slide-logo-img" src="channeltalk_logo.png" alt="채널톡">
+    </div>
+  </div>
+  <div class="demo-slide">
+    <div class="demo-stage">
+      <span class="stage-badge after">After</span>
+      <span class="stage-sub" style="color:#c45c8a">채널톡만 가능한 영역 · Live Demo</span>
+    </div>
+    <div class="demo-question">
+      이번 주 <em>재구매를 놓친 VIP</em>가 몇 명인지,<br>
+      답하실 수 있나요?
+    </div>
+    <div class="demo-sub">
+      채널톡 CoS가 주문·상담 데이터를 스스로 분석해 VIP 후보와 재구매 임박 고객을 자동 발굴하고,<br>
+      <mark class="hl-pink">AI 인터뷰·타겟 쿠폰까지 발송</mark>합니다.
+    </div>
+    <div class="demo-frame">
+      <div class="demo-frame-header">
+        <div class="demo-frame-label">CoS · Chief of Staff</div>
+        <div class="demo-frame-caption">AI 마케팅 — VIP 발굴부터 쿠폰 발송까지, 전 과정 자동</div>
+      </div>
+      <div class="cos-split">
+        <div class="cos-img-wrap">
+          <img src="cos_left.jpg" alt="CoS 데모 좌측">
+        </div>
+        <div class="cos-img-wrap focus">
+          <img src="cos_right.jpg" alt="CoS 데모 우측">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════ -->
+<!-- SLIDE 4.5b: 데모 — Notebook       -->
+<!-- ══════════════════════════════════ -->
+<div class="slide">
+  <div class="slide-header">
+    <div class="slide-num">05 · AFTER · Notebook</div>
+    <div class="slide-logo-sm">
+      <img class="slide-logo-img" src="channeltalk_logo.png" alt="채널톡">
+    </div>
+  </div>
+  <div class="demo-slide">
+    <div class="demo-stage">
+      <span class="stage-badge after">After</span>
+      <span class="stage-sub" style="color:#c45c8a">채널톡만 가능한 영역 · Live Demo</span>
+    </div>
+    <div class="demo-question">
+      VIP 객단가·재구매 흐름을<br>
+      <em>한눈에</em> 확인합니다
+    </div>
+    <div class="demo-sub">
+      Notebook이 자사몰 상담·주문 데이터를 자동 시각화해 VIP 세그먼트 추이와 리텐션 위험을 실시간으로 보여드립니다.<br>
+      데이터팀에 요청해 2주 기다릴 필요가 없습니다.
+    </div>
+    <div class="demo-frame">
+      <div class="demo-frame-header">
+        <div class="demo-frame-label">Notebook · VIP Dashboard</div>
+        <div class="demo-frame-caption">자사몰 VIP · 수분 앰플 리텐션 분석 대시보드</div>
+      </div>
+      <img class="demo-full-img notebook" src="notebook_1.jpg" alt="Notebook 데모">
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════ -->
+<!-- SLIDE 5: 성공 사례                 -->
+<!-- ══════════════════════════════════ -->
+<div class="slide">
+  <div class="slide-header">
+    <div class="slide-num">04 · 사례</div>
+    <div class="slide-logo-sm">
+      <img class="slide-logo-img" src="channeltalk_logo.png" alt="채널톡">
+    </div>
+  </div>
+  <div class="cases-slide">
+    <div class="section-label">Real Results</div>
+    <div class="section-title">
+      VIP·ASP를 끌어올린<br>
+      <em>뷰티 브랜드의 실제 성과</em>
+    </div>
+    <div class="case-row">
+
+      <!-- AMUSE -->
+      <div class="case-card amuse">
+        <div class="case-brand">
+          <img class="case-brand-logo" src="amuse_logo.webp" alt="어뮤즈">
+          <div>
+            <div class="case-brand-name">어뮤즈 AMUSE</div>
+            <div class="case-brand-tag">VIP 세그먼트 · ASP 상승</div>
+          </div>
+        </div>
+        <div class="case-challenge">
+          <strong>과제:</strong> 자사몰에 오는 소수 방문자가 1회 구매 후 이탈. 누가 VIP로 키울 후보인지 식별할 수 없어, 균등 응대로 객단가도 제자리였음.<br><br>
+          <strong>해결:</strong> 채널톡으로 VIP 후보를 자동 세그먼트 → 멤버십 단계별 안내·업셀링 시나리오를 개인별로 자동 배포
+        </div>
+        <div class="metric-row">
+          <div class="metric">
+            <div class="metric-val">40%↑</div>
+            <div class="metric-label">장바구니<br>객단가 상승</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">30%</div>
+            <div class="metric-label">VIP 멤버십<br>전환율</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">41%↑</div>
+            <div class="metric-label">VIP 기반<br>자사몰 매출</div>
+          </div>
+        </div>
+        <a class="case-link" href="https://channel.io/ko/blog/articles/marketing-case-amuse-9551a5cc" target="_blank" rel="noopener">사례 자세히 보기 →</a>
+      </div>
+
+      <!-- SKINFOOD -->
+      <div class="case-card skinfood">
+        <div class="case-brand">
+          <img class="case-brand-logo" src="skinfood_logo.webp" alt="스킨푸드">
+          <div>
+            <div class="case-brand-name">스킨푸드 SKINFOOD</div>
+            <div class="case-brand-tag">AI가 걷어내고 · 상담사는 VIP 전담</div>
+          </div>
+        </div>
+        <div class="case-challenge">
+          <strong>과제:</strong> 단순 문의에 치여 상담사가 VIP 응대·컨시어지 업무에 집중할 여력이 없었음. VIP가 와도 일반 고객과 동일하게 처리.<br><br>
+          <strong>해결:</strong> ALF(AI 에이전트)가 반복 문의를 자동 처리 → 상담사는 VIP 컨시어지 응대·업셀링에 집중
+        </div>
+        <div class="metric-row">
+          <div class="metric">
+            <div class="metric-val">33%</div>
+            <div class="metric-label">AI 자동 해결<br>(상담사 여력 확보)</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">2개월</div>
+            <div class="metric-label">전 제품 대응<br>수준 도달</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">24/7</div>
+            <div class="metric-label">VIP 응대에<br>자원 집중</div>
+          </div>
+        </div>
+        <a class="case-link" href="https://channel.io/ko/blog/articles/ai-cs-case-skinfood-a178815f" target="_blank" rel="noopener">사례 자세히 보기 →</a>
+      </div>
+
+    </div>
+
+    <div class="case-row">
+
+      <!-- TROIAREUKE -->
+      <div class="case-card troiareuke">
+        <div class="case-brand">
+          <img class="case-brand-logo" src="brand_logos/troiareuke.png" alt="트로이아르케">
+          <div>
+            <div class="case-brand-name">트로이아르케 TROIAREUKE</div>
+            <div class="case-brand-tag">타겟팅 마케팅 · 자사몰 전환</div>
+          </div>
+        </div>
+        <div class="case-challenge">
+          <strong>과제:</strong> 자사몰 방문 고객의 구매 여정에 맞춘 정교한 온사이트 마케팅 부재. 방문자가 구매로 전환되지 않고 이탈.<br><br>
+          <strong>해결:</strong> 채널톡으로 장바구니 금액별 쿠폰, 심야(22~02시) 전용 혜택, 상세 페이지 22초 체류 후 상담 유도 — 3가지 타겟 시나리오 운영
+        </div>
+        <div class="metric-row">
+          <div class="metric">
+            <div class="metric-val">2,061배</div>
+            <div class="metric-label">장바구니<br>타겟 ROAS</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">13%</div>
+            <div class="metric-label">심야 혜택<br>구매 전환율</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">83배</div>
+            <div class="metric-label">심야 혜택<br>ROAS</div>
+          </div>
+        </div>
+        <a class="case-link" href="https://channel.io/ko/blog/articles/marketing-case-troiareuke-755403dd" target="_blank" rel="noopener">사례 자세히 보기 →</a>
+      </div>
+
+      <!-- WHIPPED -->
+      <div class="case-card whipd">
+        <div class="case-brand">
+          <img class="case-brand-logo" src="brand_logos/whipd.png" alt="휩드">
+          <div>
+            <div class="case-brand-name">휩드 WHIPPED</div>
+            <div class="case-brand-tag">D2C · 단골 고객 증대</div>
+          </div>
+        </div>
+        <div class="case-challenge">
+          <strong>과제:</strong> 30%+ 재구매율 확보 후 성장 한계. 단골 고객을 더 많이 만드는 것이 매출 증가의 핵심 과제로 부상.<br><br>
+          <strong>해결:</strong> 단순 문의 자동화 + 제품 문의 상담사 즉시 대응 + 가입→혜택→구매→리뷰 단계별 메시지 + 브랜드 스토리 기반 재구매 유도
+        </div>
+        <div class="metric-row">
+          <div class="metric">
+            <div class="metric-val">30%↑</div>
+            <div class="metric-label">재구매율<br>지속 유지</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">월 3억</div>
+            <div class="metric-label">자사몰<br>월 매출</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">8배</div>
+            <div class="metric-label">1년만에<br>성장</div>
+          </div>
+        </div>
+        <a class="case-link" href="https://channel.io/ko/blog/articles/d2c-case-whipped-88624766" target="_blank" rel="noopener">사례 자세히 보기 →</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════ -->
+<!-- SLIDE 6: 채널톡 활용 제안 (글로벌/확장) -->
+<!-- ══════════════════════════════════ -->
+<div class="slide">
+  <div class="slide-header">
+    <div class="slide-num">06 · 활용 제안</div>
+    <div class="slide-logo-sm">
+      <img class="slide-logo-img" src="channeltalk_logo.png" alt="채널톡">
+    </div>
+  </div>
+  <div class="global-slide">
+    <div class="section-label">Channel.io 활용 제안</div>
+    <div class="section-title">
+      글로벌·D2C 확장까지,<br>
+      <em>채널톡을 이렇게 활용</em>할 수 있습니다
+    </div>
+    <div class="global-ref-footer" style="margin-top:0;margin-bottom:22px">
+      <div class="global-ref-label">글로벌 몰도 가능합니다</div>
+      <div class="global-ref-chips">
+        <a class="global-ref-chip" href="https://tirtir.global/" target="_blank" rel="noopener">
+          <img src="brand_logos/tirtir.png" alt="티르티르"> 글로벌
+          <span class="ref-arrow">↗</span>
+        </a>
+        <a class="global-ref-chip" href="https://beautyofjoseon.com/" target="_blank" rel="noopener">
+          <img src="brand_logos/joseon_tight.png" alt="조선미녀"> 글로벌
+          <span class="ref-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+    <div class="global-grid">
+
+      <!-- 01 -->
+      <div class="global-card">
+        <div class="global-card-num">01</div>
+        <div class="global-card-title">AI 챗봇 기반 80% 수준 자동화 응대</div>
+        <ul class="global-card-list">
+          <li>상품·배송·관세·환불 등 <strong>반복 질문 자동화</strong> (시나리오 챗봇 + STT + AI 응답)</li>
+          <li>이메일만 대응 → <strong>실시간 채팅 전환</strong>으로 고객 반응성↑</li>
+          <li>운영자가 직접 응대하지 않아도 되는 <strong>사람 개입 최소화</strong> 구조</li>
+        </ul>
+      </div>
+
+      <!-- 02 -->
+      <div class="global-card">
+        <div class="global-card-num">02</div>
+        <div class="global-card-title">Shopify 커맨드 연동</div>
+        <ul class="global-card-list">
+          <li>고객이 챗봇 안에서 <strong>직접 주문 조회·취소·배송 확인</strong></li>
+          <li>운영자 개입 없이 처리 → <strong>CS 비용 절감 + 고객 만족도↑</strong></li>
+        </ul>
+      </div>
+
+      <!-- 03 -->
+      <div class="global-card">
+        <div class="global-card-num">03</div>
+        <div class="global-card-title">리드 수집 · 마케팅 자동화</div>
+        <ul class="global-card-list">
+          <li>온사이트 팝업(쿠폰·가입 유도·이벤트) → <strong>신규 리드 유입↑</strong></li>
+          <li>카카오 북미 광고 연계 → <strong>광고 클릭 → 채널톡 → 상담 전환</strong></li>
+        </ul>
+      </div>
+
+      <!-- 04 -->
+      <div class="global-card">
+        <div class="global-card-num">04</div>
+        <div class="global-card-title">다국어 자동응대 (영어 포함)</div>
+        <ul class="global-card-list">
+          <li>챗봇 시나리오 + AI 번역으로 <strong>해외 고객 기본 대응</strong> 가능</li>
+          <li>운영자 전환 필요 시에도 <strong>태깅 기반 자동 분기</strong></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════ -->
+<!-- SLIDE 7: CTA                      -->
+<!-- ══════════════════════════════════ -->
+<div class="slide cta-slide">
+  <div class="cta-eyebrow">Next Step · 채널톡과 함께</div>
+  <div class="cta-title">
+    채널톡은 단순 CS 툴이 아닙니다,<br>
+    <span>자사몰 성장을 만드는 파트너입니다</span>
+  </div>
+  <div class="cta-limited">5월 한정 · ONLY IN MAY</div>
+  <div class="cta-sub">
+    세팅은 <em>빠르게</em>, <em>무료 데모 체험</em>까지 제공해드립니다.<br>
+    편하신 일정 알려주시면 <strong>바로 미팅 잡아드릴게요</strong>.
+  </div>
+
+  <div class="cta-boxes">
+    <div class="cta-box">
+      <div class="cta-box-icon">💎</div>
+      <div class="cta-box-title">VIP 자동 식별</div>
+      <div class="cta-box-desc">행동 데이터 기반<br>VIP 후보 자동 태깅</div>
+    </div>
+    <div class="cta-box">
+      <div class="cta-box-icon">💬</div>
+      <div class="cta-box-title">1:1 컨시어지</div>
+      <div class="cta-box-desc">멤버십·업셀링·선물<br>제안 템플릿 제공</div>
+    </div>
+    <div class="cta-box">
+      <div class="cta-box-icon">📈</div>
+      <div class="cta-box-title">ASP 성장 측정</div>
+      <div class="cta-box-desc">VIP 객단가·재구매<br>실시간 대시보드</div>
+    </div>
+  </div>
+
+  <div>
+    <a class="cta-btn" href="mailto:kevin@channel.io?subject=[채널톡]%20무료%20데모%20체험%20신청&body=안녕하세요,%20채널톡%20무료%20데모%20체험을%20신청합니다.%0A%0A▶%205월%20중%20가능한%20일정:%20%0A▶%20담당자%20성함:%0A▶%20회사/브랜드명:%0A%0A감사합니다.">무료 데모 체험 신청하기 →</a>
+  </div>
+  <div class="cta-footer">channel.io · Confidential · 2026</div>
+</div>
+
+</body>
+</html>

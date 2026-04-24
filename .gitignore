@@ -1,0 +1,15 @@
+.DS_Store
+*.DS_Store
+
+# Original file (use index.html for Pages)
+beauty_proposal.html
+
+# Helper/working files
+cos_뷰티브랜드공통.html
+notebook_뷰티브랜드공통.html
+cos_뷰티브랜드공통_1.jpg
+image.png
+
+# Unused logo versions
+brand_logos/joseon.webp
+brand_logos/joseon_cropped.png
